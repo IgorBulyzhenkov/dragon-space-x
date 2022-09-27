@@ -2,7 +2,7 @@
   "name": "test-front",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://igorbulyzhenkov.github.io/test-front",
+  "homepage": "https://igorbulyzhenkov/test-front",
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.3",
     "@testing-library/jest-dom": "^5.16.5",
