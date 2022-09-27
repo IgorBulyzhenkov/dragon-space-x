@@ -16,13 +16,14 @@ function Gallery() {
   const arrImg = [];
   data.map(({ flickr_images }) => arrImg.push(...flickr_images));
 
-  console.log(arrImg);
   return (
     <section className={s.carousel}>
       <h1 className={s.isHidden}> dragon</h1>
-      {arrImg?.map((el) => {
-        return <img src={el} alt={el} className={s.img} key={uuidv4()} />;
-      })}
+      <div className={s.roundabout}>
+        {arrImg?.map((el) => {
+          return <img src={el} alt={el} className={s.img} key={uuidv4()} />;
+        })}
+      </div>
     </section>
   );
 }
