@@ -10,7 +10,7 @@ import {
   PURGE,
   REGISTER,
 } from "redux-persist";
-import dragon from "./dragon/dragon-reducer";
+import dragon from "./dragon/dragon-slice";
 
 const middleware = [
   ...getDefaultMiddleware({

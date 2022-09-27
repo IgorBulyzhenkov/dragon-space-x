@@ -1,7 +1,7 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 
 const BASE_URL =
-  "https://api.spacexdata.com/v4/dragons/5e9d058759b1ff74a7ad5f8f";
+  "https://api.spacexdata.com/v4/dragons";
 const fetchDragon = createAsyncThunk(
   "dragon/fetchDragon",
   async (_, { rejectWithValue }) => {

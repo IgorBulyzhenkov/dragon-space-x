@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { v4 as uuidv4 } from "uuid";
-import Container from "../component/Container/Container";
+// import Container from "../component/Container/Container";
 import fetchDragon from "../redux/dragon/dragon0operation";
 import s from "./Home.module.css";
 
@@ -10,45 +10,69 @@ function Home() {
 
   const data = useSelector((state) => state.dragon.items);
 
-  console.log(data);
-  const {
-    flickr_images,
-    name,
-    wikipedia,
-    description,
-    first_flight,
-    dry_mass_kg,
-    height_w_trunk: { meters },
-  } = data;
   useEffect(() => {
     dispatch(fetchDragon());
   }, [dispatch]);
 
   return (
     <main className={s.main}>
-      <section className={s.carousel}>
-        <h1 className={s.isHidden}> dragon</h1>
-        {flickr_images?.map((el) => {
-          return <img src={el} alt={el} className={s.img} key={uuidv4()} />;
-        })}
-      </section>
-      <section className={s.dragon}>
-        {flickr_images ? (
-          <img src={flickr_images[1]} alt="" width="180" />
-        ) : null}
-        <div>
-          <h2 className={s.title}>{name} </h2>
-          <p className={s.text}>{description}</p>
-          <a href={wikipedia} target="_blank" rel="noreferrer">
-            Wikipedia {name}
-          </a>
-          <ul className={s.list}>
-            <li>{new Date(first_flight).toDateString()}</li>
-            <li>KG: {dry_mass_kg}kg</li>
-            <li>HEIGHT: {meters}m</li>
-          </ul>
-        </div>
-      </section>
+      {data ? (
+        <section className={s.dragon}>
+          {data.map(
+            ({
+              flickr_images,
+              name,
+              description,
+              first_flight,
+              dry_mass_kg,
+              wikipedia,
+              height_w_trunk: { meters },
+            }) => {
+              return (
+                <div key={uuidv4()} className={s.card}>
+                  <h2 className={s.title} key={uuidv4()}>
+                    {name}
+                  </h2>
+                  <div className={s.containerImg}>
+                    <img
+                      src={flickr_images}
+                      alt={flickr_images}
+                      className={s.img}
+                      key={uuidv4()}
+                    />
+                  </div>
+
+                  <ul className={s.list} key={uuidv4()}>
+                    <li key={uuidv4()} className={s.item}>
+                      {new Date(first_flight).toDateString()}
+                    </li>
+                    <li key={uuidv4()} className={s.item}>
+                      <span className={s.span}>KG:</span> {dry_mass_kg}kg
+                    </li>
+                    <li key={uuidv4()} className={s.item}>
+                      <span className={s.span}>HEIGHT:</span> {meters}m
+                    </li>
+                    <li key={uuidv4()} className={s.item}>
+                      <a
+                        href={wikipedia}
+                        target="_blank"
+                        rel="noreferrer"
+                        key={uuidv4()}
+                        className={s.link}
+                      >
+                        <span className={s.span}>Wikipedia:</span> {name}
+                      </a>
+                    </li>
+                  </ul>
+                  <p className={s.text} key={uuidv4()}>
+                    {description}
+                  </p>
+                </div>
+              );
+            }
+          )}
+        </section>
+      ) : null}
     </main>
   );
 }

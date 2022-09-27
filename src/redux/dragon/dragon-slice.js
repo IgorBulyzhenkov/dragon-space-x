@@ -1,7 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
 import fetchDragon from "./dragon0operation";
-// import { combineReducers } from "redux";
-// import { createReducer } from "@reduxjs/toolkit";
 
 const initialState = {
   items: [],
@@ -30,25 +28,5 @@ const dragon = createSlice({
     },
   },
 });
-// const items = createReducer([], {
-//   [fetchDragon.fulfilled]: (_, { payload }) => payload,
-// });
-
-// const loading = createReducer(false, {
-//   [fetchDragon.pending]: () => true,
-//   [fetchDragon.fulfilled]: () => false,
-//   [fetchDragon.rejected]: () => null,
-// });
-
-// const error = createReducer(null, {
-//   [fetchDragon.pending]: () => false,
-//   [fetchDragon.rejected]: (_, action) => action.payload,
-// });
-
-// export default combineReducers({
-//   items,
-//   loading,
-//   error,
-// });
 
 export default dragon.reducer;

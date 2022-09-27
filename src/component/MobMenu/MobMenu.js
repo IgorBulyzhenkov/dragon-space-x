@@ -4,10 +4,19 @@ import { FiX } from "react-icons/fi";
 import Container from "../Container/Container";
 
 function MobMenu({ setToggle }) {
+  const elBody = document.querySelector("body");
+
   const handleClickToggle = () => {
     setToggle(false);
-    const elBody = document.querySelector("body");
+
     elBody.classList.remove("hidden");
+  };
+
+  const removeClass = (e) => {
+    if (!e.target.classList.contains("MobMenu_link__RG4cL")) return;
+
+    elBody.classList.remove("hidden");
+    setToggle(false);
   };
 
   return (
@@ -16,7 +25,7 @@ function MobMenu({ setToggle }) {
         <div className={s.close}>
           <FiX onClick={handleClickToggle} className={s.close} />
         </div>
-        <ul className={s.list}>
+        <ul className={s.list} onClick={removeClass}>
           <li className={s.item}>
             <Link to="/home" className={s.link}>
               Home
