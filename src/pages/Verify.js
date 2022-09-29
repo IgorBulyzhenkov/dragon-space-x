@@ -1,7 +1,5 @@
 import { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { getVerifyToken } from "../redux/user/user-selectors";
-// import s from "./Verify.module.css";
+import { useDispatch } from "react-redux";
 import user from "../redux/user/userOperation";
 
 const { fetchVerifyUser } = user;
@@ -13,7 +11,7 @@ function Verify() {
     dispatch(fetchVerifyUser());
   }, [dispatch]);
 
-  return <h1>Verify</h1>;
+  return <h1>Thank you for verification</h1>;
 }
 
 export default Verify;
