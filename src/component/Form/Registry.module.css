@@ -1,0 +1,30 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 280px;
+    margin: 0 auto;
+    border: 1px solid rgba(47, 72, 47, 0.537);
+    padding: 25px;
+    border-radius: 5px;
+}
+
+.label {
+    display: flex;
+    flex-direction: column;
+}
+
+.input {
+    margin-bottom: 30px;
+    height: 20px;
+    border-radius: 7px;
+}
+
+
+.buttonReg {
+    min-width: 80px;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: aqua;
+    cursor: pointer;
+    margin: 0 auto;
+}

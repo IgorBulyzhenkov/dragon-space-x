@@ -5,18 +5,26 @@ import Container from "../Container/Container";
 import { MdMenu } from "react-icons/md";
 import { useState } from "react";
 import MobMenu from "../MobMenu/MobMenu";
+import { useDispatch } from "react-redux";
+import user from "../../redux/user/userOperation";
+
+const { logOutUser } = user;
 
 function Header() {
   const [toggle, setToggle] = useState(false);
 
   const elBody = document.querySelector("body");
-
+  const dispatch = useDispatch();
   const toggleClick = () => {
     if (toggle === true) {
       return setToggle(false);
     }
     setToggle(true);
     elBody.classList.add("hidden");
+  };
+
+  const handleClick = () => {
+    dispatch(logOutUser());
   };
 
   return (
@@ -33,9 +41,21 @@ function Header() {
             </Link>
           </nav>
           <ul className={s.list}>
-            <li className={s.item}>Log in</li>
-            <li className={s.item}>Log out</li>
-            <li className={s.item}>Sin in</li>
+            <li className={s.item}>
+              <Link to="/login" className={s.link}>
+                Log in
+              </Link>
+            </li>
+            <li className={s.item}>
+              <Link to="/auth" className={s.link}>
+                Registration
+              </Link>
+            </li>
+            <li className={s.item}>
+              <button type="button" onClick={handleClick}>
+                Log out
+              </button>
+            </li>
           </ul>
           <div className={s.menu}>
             <MdMenu
