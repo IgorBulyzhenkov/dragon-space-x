@@ -11,6 +11,7 @@
         background-repeat: no-repeat;
         background-position: -5px 76%;
         overflow: hidden;
+        z-index: 3;
     }
 
     @media (min-device-pixel-ratio: 2),
@@ -55,7 +56,26 @@
     }
 
 
-    .link {
+    .activeLink {
+        position: relative;
+        color: #009cff;
+        font-size: 15px;
+        line-height: 1.15;
+        font-family: 'Montserrat';
+    }
+
+    .buttonExit {
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        color: black;
+        font-size: 15px;
+        line-height: 1.15;
+        font-family: 'Montserrat';
+        font-weight: 500;
+    }
+
+    .navLink {
         position: relative;
         color: black;
         font-size: 15px;

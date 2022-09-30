@@ -39,11 +39,11 @@ function LoginUser() {
 
   return (
     <div>
-      <h1>Anywhere in your app!</h1>
+      {/* <h1>Anywhere in your app!</h1> */}
       <Formik
         validate={(values) => {
           const errors = {};
-          if (!values.email) {
+          if (!values?.email) {
             errors.email = "Required";
           } else if (
             !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)

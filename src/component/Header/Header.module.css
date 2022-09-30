@@ -34,6 +34,14 @@
     display: none;
 }
 
+.buttonExit {
+    display: none;
+}
+
+.text {
+    display: none;
+}
+
 
 @media screen and (min-width: 768px) {
 
@@ -43,7 +51,6 @@
 
     .nav {
         display: flex;
-        margin-left: auto;
         margin-right: 50px;
     }
 
@@ -51,16 +58,36 @@
         margin-right: 20px;
     }
 
-    .link {
+    .navLink {
         color: black;
-        font-size: 24px;
+        font-size: 15px;
         font-weight: 500;
         line-height: 1.22;
         font-family: 'Montserrat';
     }
 
+    .activeLink {
+        position: relative;
+        color: black;
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 1.22;
+        font-family: 'Montserrat';
+
+    }
+
+    .activeLink::after {
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        border: 1px solid #009cff;
+        background-color: #009cff;
+        width: 100%;
+        left: 0;
+    }
+
     .logo {
-        width: 100px;
+        width: 80px;
     }
 
     .burgerMenu {
@@ -70,10 +97,45 @@
     .list {
         list-style: none;
         display: flex;
+        padding: 0;
+        margin-left: auto;
     }
 
     .item:not(:last-child) {
-        margin-right: 20px;
+        margin-right: 40px;
+    }
+
+    .buttonExit {
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        display: flex;
+        position: relative;
+    }
+
+    .buttonExit::before {
+        content: "";
+        top: -14px;
+        border-left: 1px solid grey;
+        height: 55px;
+        position: absolute;
+        left: -15px;
+    }
+
+    .svgButton {
+        font-size: 25px;
+    }
+
+    .text {
+        display: block;
+        color: black;
+        min-width: 180px;
+        margin: 0 auto;
+        font-weight: 500;
+        line-height: 1.22;
+        font-family: 'Montserrat';
+        font-size: 20px;
+        text-align: center;
     }
 }
 

@@ -44,9 +44,8 @@ function Registry() {
 
   return (
     <div>
-      <h1>Anywhere in your app!</h1>
+      {/* <h1>Anywhere in your app!</h1> */}
       <Formik
-        initialValues={{ email: "", password: "" }}
         validate={(values) => {
           const errors = {};
           if (!values.email) {
@@ -58,12 +57,7 @@ function Registry() {
           }
           return errors;
         }}
-        onSubmit={(values, { setSubmitting }) => {
-          setTimeout(() => {
-            alert(JSON.stringify(values, null, 2));
-            setSubmitting(false);
-          }, 400);
-        }}
+    
       >
         {({
           errors,

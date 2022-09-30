@@ -1,20 +1,31 @@
 import s from "./MobMenu.module.css";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { FiX } from "react-icons/fi";
 import Container from "../Container/Container";
+import { useDispatch, useSelector } from "react-redux";
+import { getInLoggedIn } from "../../redux/user/user-selectors";
+import user from "../../redux/user/userOperation";
+
+const { logOutUser } = user;
 
 function MobMenu({ setToggle }) {
+  const dispatch = useDispatch();
+  const isLoggedIn = useSelector(getInLoggedIn);
+
   const elBody = document.querySelector("body");
 
   const handleClickToggle = () => {
     setToggle(false);
-
     elBody.classList.remove("hidden");
   };
 
-  const removeClass = (e) => {
-    if (!e.target.classList.contains("MobMenu_link__RG4cL")) return;
+  const handleClick = () => {
+    dispatch(logOutUser());
+    elBody.classList.remove("hidden");
+    setToggle(false);
+  };
 
+  const removeClass = () => {
     elBody.classList.remove("hidden");
     setToggle(false);
   };
@@ -25,21 +36,64 @@ function MobMenu({ setToggle }) {
         <div className={s.close}>
           <FiX onClick={handleClickToggle} className={s.close} />
         </div>
-        <ul className={s.list} onClick={removeClass}>
-          <li className={s.item}>
-            <Link to="/home" className={s.link}>
-              Home
-            </Link>
-          </li>
-          <li className={s.item}>
-            <Link to="/gallery" className={s.link}>
-              Gallery
-            </Link>
-          </li>
-          <li className={s.item}>Log in</li>
-          <li className={s.item}>Log out</li>
-          <li className={s.item}>Sin in</li>
-        </ul>
+
+        {/* <ul className={s.list} onClick={removeClass}> */}
+        {isLoggedIn ? (
+          <ul className={s.list}>
+            <li className={s.item}>
+              <NavLink
+                to="/home"
+                className={({ isActive }) =>
+                  isActive ? s.activeLink : s.navLink
+                }
+                onClick={removeClass}
+              >
+                Home
+              </NavLink>
+            </li>
+            <li className={s.item}>
+              <NavLink
+                to="/gallery"
+                className={({ isActive }) =>
+                  isActive ? s.activeLink : s.navLink
+                }
+                onClick={removeClass}
+              >
+                Gallery
+              </NavLink>
+            </li>
+            <li className={s.item}>
+              <button onClick={handleClick} className={s.buttonExit}>
+                Log out
+              </button>
+            </li>
+          </ul>
+        ) : (
+          <ul className={s.list} onClick={removeClass}>
+            <li className={s.item}>
+              <NavLink
+                to="/login"
+                className={({ isActive }) =>
+                  isActive ? s.activeLink : s.navLink
+                }
+                onClick={removeClass}
+              >
+                Log in
+              </NavLink>
+            </li>
+            <li className={s.item}>
+              <NavLink
+                to="/auth"
+                className={({ isActive }) =>
+                  isActive ? s.activeLink : s.navLink
+                }
+                onClick={removeClass}
+              >
+                Registration
+              </NavLink>
+            </li>
+          </ul>
+        )}
       </div>
     </Container>
   );
