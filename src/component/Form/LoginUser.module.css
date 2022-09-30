@@ -4,6 +4,7 @@
     border: 1px solid rgba(47, 72, 47, 0.537);
     padding: 25px;
     border-radius: 5px;
+    margin: 0 auto;
     margin-bottom: 35px;
     background-color: rgb(177 176 176 / 27%);
     box-shadow: 0px 3px 10px 2px #18191a;
@@ -17,6 +18,7 @@
 .textContainer {
     text-align: center;
     width: 260px;
+    margin: 0 auto;
 }
 
 .label {
