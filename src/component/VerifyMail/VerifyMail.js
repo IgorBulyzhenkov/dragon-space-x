@@ -17,8 +17,8 @@ function VerifyMail() {
   return (
     <div className={s.textContainer}>
       <p className={s.text}>
-        A letter has been sent to the {email} to confirm the e-mail. If the
-        email has not arrived, click send again
+        A letter has been sent to the <span className={s.span}>{email}</span> to
+        confirm the e-mail. If the email has not arrived, click send again
       </p>
       <button type="button" className={s.button} onClick={handleClick}>
         send again

@@ -45,8 +45,14 @@ function Registry() {
   return (
     <div className={s.formContainer}>
       <div className={s.textContainer}>
-        <h1>Hello!</h1>
-        <p>lkmkldjsfjdsmckmpoke[odke[pwld][plc[pld[cemkkp;okdf'def;lew'</p>
+        <h1 className={s.title}>Hello!</h1>
+        <p className={s.text}>
+          I am glad that you are reviewing my test assignment. In order to go to
+          the main pages, you need to register, then confirm your email, and
+          only then browse the site. The website is adapted to all types of
+          devices, from mobile to desktop. I wish you a nice day and a pleasant
+          viewing!
+        </p>
       </div>
       {/* <h1>Anywhere in your app!</h1> */}
       <Formik

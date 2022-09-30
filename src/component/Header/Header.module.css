@@ -10,7 +10,8 @@
 .headerContainer {
     display: flex;
     align-items: center;
-    width: 100%;
+    width: 260px;
+    margin: 0 auto;
     justify-content: space-between;
 }
 
@@ -49,6 +50,10 @@
 
     .header {
         height: 80px;
+    }
+
+    .headerContainer {
+        width: 708px;
     }
 
     .nav {
@@ -144,6 +149,10 @@
 @media screen and (min-width: 1280px) {
     .header {
         height: 100px;
+    }
+
+    .headerContainer {
+        width: 1220px;
     }
 
     .link {

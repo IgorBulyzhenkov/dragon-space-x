@@ -16,6 +16,7 @@ import {
 } from "./redux/user/user-selectors";
 import "./App.css";
 import Verify from "./pages/Verify";
+import Footer from "./component/Footer/Footer";
 
 const { fetchCurrentUser } = user;
 
@@ -31,53 +32,58 @@ function App() {
   }, [dispatch]);
 
   return (
-    <div className="App">
-      <Header />
-      <Routes>
-        <Route
-          path="/auth"
-          element={
-            <PublicRoute>
-              <Registration />
-            </PublicRoute>
-          }
-        />
-        <Route
-          path="/login"
-          element={
-            <PublicRoute>
-              <Login />
-            </PublicRoute>
-          }
-        />
-        <Route
-          path="/home"
-          element={
-            <PrivetRoute>
-              <Home />
-            </PrivetRoute>
-          }
-        />
-        <Route
-          path="/gallery"
-          element={
-            <PrivetRoute>
-              <Gallery />
-            </PrivetRoute>
-          }
-        />
-        <Route
-          path="/verify"
-          element={
-            !verify && verifyToken ? <Verify /> : <Navigate to="/home" />
-          }
-        />
-        <Route
-          path="*"
-          element={userName ? <Navigate to="/home" /> : <Navigate to="/auth" />}
-        />
-      </Routes>
-    </div>
+    <>
+      <div class="App">
+        <Header />
+        <Routes>
+          <Route
+            path="/auth"
+            element={
+              <PublicRoute>
+                <Registration />
+              </PublicRoute>
+            }
+          />
+          <Route
+            path="/login"
+            element={
+              <PublicRoute>
+                <Login />
+              </PublicRoute>
+            }
+          />
+          <Route
+            path="/home"
+            element={
+              <PrivetRoute>
+                <Home />
+              </PrivetRoute>
+            }
+          />
+          <Route
+            path="/gallery"
+            element={
+              <PrivetRoute>
+                <Gallery />
+              </PrivetRoute>
+            }
+          />
+          <Route
+            path="/verify"
+            element={
+              !verify && verifyToken ? <Verify /> : <Navigate to="/home" />
+            }
+          />
+          <Route
+            path="*"
+            element={
+              userName ? <Navigate to="/home" /> : <Navigate to="/auth" />
+            }
+          />
+        </Routes>
+      </div>
+      <Footer />
+    </>
   );
 }
 

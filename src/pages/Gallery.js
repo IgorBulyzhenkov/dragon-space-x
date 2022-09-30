@@ -21,7 +21,7 @@ function Gallery() {
   data.map(({ flickr_images }) => arrImg.push(...flickr_images));
 
   return (
-    <section className={s.carousel}>
+    <main className={s.carousel}>
       <div style={{ padding: `0 ${chevronWidth}px` }}>
         <ItemsCarousel
           requestToChangeActive={setActiveItemIndex}
@@ -47,7 +47,7 @@ function Gallery() {
           })}
         </ItemsCarousel>
       </div>
-    </section>
+    </main>
   );
 }
 

@@ -130,11 +130,11 @@
 @media screen and (min-width:1280px) {
 
     .main {
-
+        padding-bottom: 50px;
         background-image: url("../image/kisspng-spacex_1x-desctop.png");
         background-size: contain;
         background-repeat: no-repeat;
-        background-position: 30px;
+        background-position: 30px 10px;
     }
 
 

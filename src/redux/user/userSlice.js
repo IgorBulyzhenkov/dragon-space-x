@@ -36,13 +36,15 @@ const authSlice = createSlice({
     [logInUser.fulfilled](state, { payload }) {
       state.user = payload.user;
       state.token = payload.token;
+      state.email = null;
       state.isLoggedIn = true;
       state.isRefreshing = false;
       state.verifyMail = false;
     },
     [logOutUser.fulfilled](state) {
-      state.user = { name: null, email: null };
+      state.user = { name: null };
       state.token = null;
+      state.email = null;
       state.isLoggedIn = false;
       state.isRefreshing = false;
       state.verifyMail = false;
@@ -56,6 +58,7 @@ const authSlice = createSlice({
       state.user = payload.user;
       state.isLoggedIn = true;
       state.token = payload.user.token;
+      state.email = null;
       state.verificationToken = null;
       state.isRefreshing = false;
       state.verifyMail = false;
