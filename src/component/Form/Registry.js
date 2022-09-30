@@ -43,12 +43,16 @@ function Registry() {
   };
 
   return (
-    <div>
+    <div className={s.formContainer}>
+      <div className={s.textContainer}>
+        <h1>Hello!</h1>
+        <p>lkmkldjsfjdsmckmpoke[odke[pwld][plc[pld[cemkkp;okdf'def;lew'</p>
+      </div>
       {/* <h1>Anywhere in your app!</h1> */}
       <Formik
         validate={(values) => {
           const errors = {};
-          if (!values.email) {
+          if (!values?.email) {
             errors.email = "Required";
           } else if (
             !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
@@ -57,7 +61,6 @@ function Registry() {
           }
           return errors;
         }}
-    
       >
         {({
           errors,
@@ -68,40 +71,40 @@ function Registry() {
         }) => (
           <form onSubmit={handleSubmit} className={s.form}>
             <label className={s.label}>
-              Name
+              <span className={s.spanLabel}>Name</span>
               <input
                 type="text"
                 name="name"
                 onChange={handleChange}
                 onBlur={handleBlur}
                 value={name}
-                className={s.input}
+                className={s.textField__input}
                 placeholder="you name"
               />
             </label>
             <label className={s.label}>
-              Email
+              <span className={s.spanLabel}>Email</span>
               <input
                 type="email"
                 name="email"
                 onChange={handleChange}
                 onBlur={handleBlur}
                 value={email}
-                className={s.input}
+                className={s.textField__input}
                 placeholder="your@mail.com"
               />
             </label>
 
             {errors.email && touched.email && errors.email}
             <label className={s.label}>
-              Password
+              <span className={s.spanLabel}>Password</span>
               <input
                 type="password"
                 name="password"
                 onChange={handleChange}
                 onBlur={handleBlur}
                 value={password}
-                className={s.input}
+                className={s.textField__input}
                 placeholder="you password"
               />
             </label>

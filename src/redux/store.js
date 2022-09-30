@@ -22,7 +22,7 @@ const middleware = [
 const userPersistor = {
   key: "user",
   storage,
-  whitelist: ["token", "verificationToken"],
+  whitelist: ["token", "verificationToken", "email", "verifyMail"],
 };
 
 const store = configureStore({

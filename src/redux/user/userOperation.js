@@ -77,10 +77,29 @@ const fetchVerifyUser = createAsyncThunk(
   async (_, { getState, rejectWithValue }) => {
     const state = getState();
     const persistorToken = state.user.verificationToken;
-    console.log(state.user.verificationToken);
+
     if (persistorToken === null) return rejectWithValue();
     try {
       const { data } = await axios.get(`/verify/${persistorToken}`);
+      return data;
+    } catch (error) {
+      Notify.failure(error.response.data.message);
+      return rejectWithValue(error.response.data.message);
+    }
+  }
+);
+
+const fetchVerifyMail = createAsyncThunk(
+  "user/fetchVerifyMail",
+  async (_, { rejectWithValue, getState }) => {
+    const state = getState();
+    const persistorMail = state.user.email;
+
+    console.log(persistorMail);
+
+    if (persistorMail === null) return rejectWithValue();
+    try {
+      const { data } = await axios.post("/verify", { email: persistorMail });
       return data;
     } catch (error) {
       Notify.failure(error.response.data.message);
@@ -95,6 +114,7 @@ const user = {
   logOutUser,
   fetchCurrentUser,
   fetchVerifyUser,
+  fetchVerifyMail,
 };
 
 export default user;
