@@ -1,6 +1,6 @@
 import axios from "axios";
 
-axios.defaults.baseURL = "http://localhost:4000/api/users";
+axios.defaults.baseURL = "https://igor-bulyzhenkov.herokuapp.com/api/users";
 
 export const token = {
   set(token) {
