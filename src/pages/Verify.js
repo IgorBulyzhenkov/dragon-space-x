@@ -14,7 +14,7 @@ function Verify() {
   }, [dispatch]);
 
   return (
-    <Container className={s.container}>
+    <Container>
       <h1 className={s.title}>Thank you for verification</h1>
     </Container>
   );

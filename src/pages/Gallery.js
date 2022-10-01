@@ -1,21 +1,16 @@
-import { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useState } from "react";
+import { useSelector } from "react-redux";
 import { v4 as uuidv4 } from "uuid";
-import fetchDragon from "../redux/dragon/dragon0operation";
 import s from "./Gallery.module.css";
 import ItemsCarousel from "react-items-carousel";
 import { FaArrowCircleRight, FaArrowCircleLeft } from "react-icons/fa";
+import { getDragonItems } from "../redux/dragon/dragon-selector";
 
 function Gallery() {
   const [activeItemIndex, setActiveItemIndex] = useState(0);
   const chevronWidth = 40;
-  const dispatch = useDispatch();
 
-  const data = useSelector((state) => state.dragon.items);
-
-  useEffect(() => {
-    dispatch(fetchDragon());
-  }, [dispatch]);
+  const data = useSelector(getDragonItems);
 
   const arrImg = [];
   data.map(({ flickr_images }) => arrImg.push(...flickr_images));
@@ -53,11 +48,3 @@ function Gallery() {
 
 export default Gallery;
 
-// <section className={s.carousel}>
-//   <h1 className={s.isHidden}> dragon</h1>
-//   <div className={s.roundabout}>
-//     {arrImg?.map((el) => {
-//       return <img src={el} alt={el} className={s.img} key={uuidv4()} />;
-//     })}
-//   </div>
-// </section>;

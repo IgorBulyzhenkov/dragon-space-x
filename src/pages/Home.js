@@ -1,18 +1,10 @@
-import { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import { v4 as uuidv4 } from "uuid";
-// import Container from "../component/Container/Container";
-import fetchDragon from "../redux/dragon/dragon0operation";
+import { getDragonItems } from "../redux/dragon/dragon-selector";
 import s from "./Home.module.css";
 
 function Home() {
-  const dispatch = useDispatch();
-
-  const data = useSelector((state) => state.dragon.items);
-
-  useEffect(() => {
-    dispatch(fetchDragon());
-  }, [dispatch]);
+  const data = useSelector(getDragonItems);
 
   return (
     <main className={s.main}>

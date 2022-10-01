@@ -17,23 +17,27 @@ import {
 import "./App.css";
 import Verify from "./pages/Verify";
 import Footer from "./component/Footer/Footer";
+import { getDragonItems } from "./redux/dragon/dragon-selector";
+import fetchDragon from "./redux/dragon/dragon0operation";
 
 const { fetchCurrentUser } = user;
 
 function App() {
-  // const isFetching = useSelector(getIsFetchingCurrent);
+  const items = useSelector(getDragonItems);
   const userName = useSelector(getName);
   const verify = useSelector(getVerify);
   const verifyToken = useSelector(getVerifyToken);
   const dispatch = useDispatch();
 
   useEffect(() => {
+    if (items.length) return;
     dispatch(fetchCurrentUser());
-  }, [dispatch]);
+    dispatch(fetchDragon());
+  }, [dispatch, items]);
 
   return (
     <>
-      <div class="App">
+      <div className="App">
         <Header />
         <Routes>
           <Route
