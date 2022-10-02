@@ -1,6 +1,7 @@
 import { useSelector } from "react-redux";
 import { Navigate } from "react-router-dom";
 import { getInLoggedIn } from "../../redux/user/user-selectors";
+import PropTypes from "prop-types";
 
 function PrivetRoute({ children, redirect = "/register" }) {
   const isLoggedIn = useSelector(getInLoggedIn);
@@ -8,3 +9,7 @@ function PrivetRoute({ children, redirect = "/register" }) {
 }
 
 export default PrivetRoute;
+
+PrivetRoute.propTypes = {
+  children: PropTypes.node.isRequired,
+};

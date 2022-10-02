@@ -1,8 +1,9 @@
 import s from "./MobMenu.module.css";
 import { NavLink } from "react-router-dom";
 import { FiX } from "react-icons/fi";
-import Container from "../Container/Container";
 import { useDispatch, useSelector } from "react-redux";
+import PropTypes from "prop-types";
+import Container from "../Container/Container";
 import { getInLoggedIn } from "../../redux/user/user-selectors";
 import user from "../../redux/user/userOperation";
 
@@ -100,3 +101,7 @@ function MobMenu({ setToggle }) {
 }
 
 export default MobMenu;
+
+MobMenu.propTypes = {
+  setToggle: PropTypes.func.isRequired,
+};

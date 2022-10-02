@@ -5,6 +5,7 @@ import { getVerifyMail } from "../redux/user/user-selectors";
 import s from "./Registration.module.css";
 
 import Container from "../component/Container/Container";
+import { memo } from "react";
 function Registration() {
   const verifyMail = useSelector(getVerifyMail);
 
@@ -17,4 +18,4 @@ function Registration() {
     </main>
   );
 }
-export default Registration;
+export default memo(Registration);

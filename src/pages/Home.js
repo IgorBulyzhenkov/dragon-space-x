@@ -1,3 +1,4 @@
+import { memo } from "react";
 import { useSelector } from "react-redux";
 import { v4 as uuidv4 } from "uuid";
 import { getDragonItems } from "../redux/dragon/dragon-selector";
@@ -69,4 +70,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default memo(Home);

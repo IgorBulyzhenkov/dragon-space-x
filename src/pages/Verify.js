@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { memo, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import user from "../redux/user/userOperation";
 import Container from "../component/Container/Container";
@@ -14,10 +14,12 @@ function Verify() {
   }, [dispatch]);
 
   return (
-    <Container>
-      <h1 className={s.title}>Thank you for verification</h1>
-    </Container>
+    <main className={s.main}> 
+      <Container>
+        <h1 className={s.title}>Thank you for verification</h1>
+      </Container>
+    </main>
   );
 }
 
-export default Verify;
+export default memo(Verify);

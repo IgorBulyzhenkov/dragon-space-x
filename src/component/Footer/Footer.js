@@ -1,3 +1,4 @@
+import { memo } from "react";
 import images from "../../image/ukr.jpg";
 import s from "./Footer.module.css";
 
@@ -24,4 +25,4 @@ function Footer() {
   );
 }
 
-export default Footer;
+export default memo(Footer);

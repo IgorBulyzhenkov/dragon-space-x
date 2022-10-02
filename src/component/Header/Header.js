@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import logo from "../../image/kisspnspacex-dragon.png";
 import Container from "../Container/Container";
 import { MdMenu } from "react-icons/md";
-import { useState } from "react";
+import { useState, memo } from "react";
 import { MdOutlineExitToApp } from "react-icons/md";
 import MobMenu from "../MobMenu/MobMenu";
 import { useDispatch, useSelector } from "react-redux";
@@ -16,7 +16,7 @@ function Header() {
   const [toggle, setToggle] = useState(false);
   const isLoggedIn = useSelector(getInLoggedIn);
   const name = useSelector(getName);
-  
+
   const elBody = document.querySelector("body");
   const dispatch = useDispatch();
   const toggleClick = () => {
@@ -109,4 +109,4 @@ function Header() {
   );
 }
 
-export default Header;
+export default memo(Header);
