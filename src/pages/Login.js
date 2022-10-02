@@ -4,7 +4,6 @@ import VerifyMail from "../component/VerifyMail/VerifyMail";
 import { getVerifyMail } from "../redux/user/user-selectors";
 import s from "./Login.module.css";
 import Container from "../component/Container/Container";
-import { memo } from "react";
 
 function Login() {
   const verifyMail = useSelector(getVerifyMail);
@@ -19,4 +18,4 @@ function Login() {
   );
 }
 
-export default memo(Login);
+export default Login;

@@ -1,4 +1,4 @@
-import { useState, memo } from "react";
+import { useState } from "react";
 import { useSelector } from "react-redux";
 import { v4 as uuidv4 } from "uuid";
 import s from "./Gallery.module.css";
@@ -46,4 +46,4 @@ function Gallery() {
   );
 }
 
-export default memo(Gallery);
+export default Gallery;

@@ -1,4 +1,3 @@
-import { memo } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import { v4 as uuidv4 } from "uuid";
@@ -90,4 +89,4 @@ function Home() {
   );
 }
 
-export default memo(Home);
+export default Home;
