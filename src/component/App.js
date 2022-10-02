@@ -5,14 +5,9 @@ import PrivetRoute from "./Routy/PrivatRouter";
 import PublicRoute from "./Routy/PublickRouter";
 import user from "../redux/user/userOperation";
 import PulseLoader from "react-spinners/PulseLoader";
-import {
-  getIsFetchingCurrent,
-  getVerify,
-  getVerifyToken,
-} from "../redux/user/user-selectors";
+import { getVerify, getVerifyToken } from "../redux/user/user-selectors";
 import "./App.css";
 import Footer from "./Footer/Footer";
-import { getDragonItems } from "../redux/dragon/dragon-selector";
 import dragonOperation from "../redux/dragon/dragonOperation";
 import { getInLoggedIn } from "../redux/user/user-selectors";
 import Header from "./Header/Header";
@@ -42,19 +37,16 @@ const { fetchCurrentUser } = user;
 const { fetchDragon } = dragonOperation;
 
 function App() {
-  const items = useSelector(getDragonItems);
-  const IsFetching = useSelector(getIsFetchingCurrent);
   const verify = useSelector(getVerify);
   const verifyToken = useSelector(getVerifyToken);
   const dispatch = useDispatch();
   const isLoggedIn = useSelector(getInLoggedIn);
 
   useEffect(() => {
-    if (items.length) return;
+    if (isLoggedIn) return;
     dispatch(fetchCurrentUser());
-    if (!isLoggedIn) return;
     dispatch(fetchDragon());
-  }, [dispatch, items, isLoggedIn]);
+  }, [dispatch, isLoggedIn]);
 
   return (
     <>
@@ -69,14 +61,6 @@ function App() {
         >
           <Routes>
             <Route
-              path="/home"
-              element={
-                <PrivetRoute>
-                  <Home />
-                </PrivetRoute>
-              }
-            />
-            <Route
               path="/auth"
               element={
                 <PublicRoute>
@@ -90,6 +74,14 @@ function App() {
                 <PublicRoute>
                   <Login />
                 </PublicRoute>
+              }
+            />
+            <Route
+              path="/home"
+              element={
+                <PrivetRoute>
+                  <Home />
+                </PrivetRoute>
               }
             />
             <Route
@@ -114,14 +106,12 @@ function App() {
                 !verify && verifyToken ? <Verify /> : <Navigate to="/home" />
               }
             />
-            {!IsFetching && (
               <Route
                 path="*"
                 element={
                   isLoggedIn ? <Navigate to="/home" /> : <Navigate to="/auth" />
                 }
               />
-            )}
           </Routes>
         </Suspense>
       </div>

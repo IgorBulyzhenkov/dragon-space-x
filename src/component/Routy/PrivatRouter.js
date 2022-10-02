@@ -1,11 +1,13 @@
 import { useSelector } from "react-redux";
 import { Navigate } from "react-router-dom";
-import { getInLoggedIn } from "../../redux/user/user-selectors";
 import PropTypes from "prop-types";
+import { getToken } from "../../redux/user/user-selectors";
 
-function PrivetRoute({ children, redirect = "/auth" }) {
-  const isLoggedIn = useSelector(getInLoggedIn);
-  return isLoggedIn ? children : <Navigate to={redirect} replace />;
+function PrivetRoute({ children, redirect = "/auth" })
+{
+  let token = useSelector(getToken);
+ 
+  return token ? children : <Navigate to={redirect} replace />;
 }
 
 export default PrivetRoute;

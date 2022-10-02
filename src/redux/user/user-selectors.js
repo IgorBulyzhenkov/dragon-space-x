@@ -6,3 +6,4 @@ export const getIsFetchingCurrent = (state) => state.user.isRefreshing;
 export const getVerify = (state) => state?.user?.user?.verify;
 export const getVerifyToken = (state) => state?.user?.verificationToken;
 export const getVerifyMail = (state) => state.user.verifyMail;
+export const getToken = (state) => state?.user?.token;
