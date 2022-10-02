@@ -13,7 +13,7 @@ import {
 import "./App.css";
 import Footer from "./Footer/Footer";
 import { getDragonItems } from "../redux/dragon/dragon-selector";
-import fetchDragon from "../redux/dragon/dragon0operation";
+import dragonOperation from "../redux/dragon/dragonOperation";
 import { getInLoggedIn } from "../redux/user/user-selectors";
 import Header from "./Header/Header";
 
@@ -35,7 +35,11 @@ const Login = lazy(() =>
   import("../pages/Login" /* webpackChunkName: "Login" */)
 );
 
+const DragonDetails = lazy(() =>
+  import("../pages/DragonDetails" /* webpackChunkName: "DragonDetails" */)
+);
 const { fetchCurrentUser } = user;
+const { fetchDragon } = dragonOperation;
 
 function App() {
   const items = useSelector(getDragonItems);
@@ -93,6 +97,14 @@ function App() {
               element={
                 <PrivetRoute>
                   <Gallery />
+                </PrivetRoute>
+              }
+            />
+            <Route
+              path="/details/:id"
+              element={
+                <PrivetRoute>
+                  <DragonDetails />
                 </PrivetRoute>
               }
             />

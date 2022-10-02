@@ -1,11 +1,26 @@
 import { memo } from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { Link, useNavigate } from "react-router-dom";
 import { v4 as uuidv4 } from "uuid";
+import { FaHandPointer } from "react-icons/fa";
 import { getDragonItems } from "../redux/dragon/dragon-selector";
 import s from "./Home.module.css";
+import dragonOperation from "../redux/dragon/dragonOperation";
+
+const { fetchDragonId } = dragonOperation;
 
 function Home() {
   const data = useSelector(getDragonItems);
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+
+  const handleClick = (e) => {
+    e.preventDefault();
+    const id = e.target.id;
+    if (!id) return;
+    dispatch(fetchDragonId(id));
+    navigate(`/details/${id}`);
+  };
 
   return (
     <main className={s.main}>
@@ -14,6 +29,7 @@ function Home() {
           {data.map(
             ({
               flickr_images,
+              id,
               name,
               description,
               first_flight,
@@ -27,12 +43,16 @@ function Home() {
                     {name}
                   </h2>
                   <div className={s.containerImg}>
-                    <img
-                      src={flickr_images}
-                      alt={flickr_images}
-                      className={s.img}
-                      key={uuidv4()}
-                    />
+                    <Link onClick={handleClick} id={id} className={s.link_img}>
+                      <img
+                        src={flickr_images}
+                        alt={flickr_images}
+                        className={s.img}
+                        key={uuidv4()}
+                        id={id}
+                      />
+                      <FaHandPointer className={s.click} />
+                    </Link>
                   </div>
 
                   <ul className={s.list} key={uuidv4()}>

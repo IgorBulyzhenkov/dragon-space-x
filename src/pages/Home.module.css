@@ -47,6 +47,17 @@
     transform: scale(1.15);
 }
 
+.link_img {
+    position: relative;
+}
+
+.click {
+    position: absolute;
+    top: -5px;
+    right: 5px;
+    fill: #fff;
+}
+
 .list {
     list-style: none;
     padding: 0;
