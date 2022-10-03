@@ -4,6 +4,7 @@
 - [Dragon](#dragon)
 - [Pages](#pages)
 - [Getting Started](#getting-started-with-create-react-app-and-redux)
+- [Libary](#libary)
 
 
 
@@ -20,6 +21,26 @@
 ## Pages
 
 [![The-Gentelmens.jpg](https://i.postimg.cc/C1XCCdM5/The-Gentelmens.jpg)](https://postimg.cc/YGNmMrWB)
+  
+## Libery
+
+List of libraries I used in this project
+
+|  Libary | NPM |
+| ------ | ------ | 
+| Redux | https://www.npmjs.com/package/redux |
+| Redux-Tulkit | https://www.npmjs.com/package/@reduxjs/toolkit |
+| redux-persist | https://www.npmjs.com/package/redux-persist |
+| react-router-dom |https://www.npmjs.com/package/react-router-dom|
+| react-dom | https://www.npmjs.com/package/react-dom |
+| prop-types | https://www.npmjs.com/package/prop-types |
+| formik | https://www.npmjs.com/package/formik |
+| uuid | https://www.npmjs.com/package/uuid |
+| axios |https://www.npmjs.com/package/axios |
+| react-icons |https://www.npmjs.com/package/react-icons|
+| react-items-carousel | https://www.npmjs.com/package/react-items-carousel |
+| react-spinners | https://www.npmjs.com/package/react-spinners |
+
 
 ## Getting Started with Create React App and Redux
 
