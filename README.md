@@ -12,7 +12,7 @@
 
 ## Dragon Space-X
 
-<img src="./src/image/Dragon.gif" width="800" align="center"/>
+<img src="./src/image/Dragon.gif" width="1000"/>
 
 ## Description
 
