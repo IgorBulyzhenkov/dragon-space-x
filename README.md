@@ -1,6 +1,6 @@
 - [Dragon](#dragon)
 - [Pages](#pages)
-- [Getting Started](#getting started)
+- [Getting Started](#getting-started)
 
 # Dragon Space-X
 
