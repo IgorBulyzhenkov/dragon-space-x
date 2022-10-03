@@ -1,7 +1,6 @@
 - [Dragon](#dragon)
 - [Pages](#pages)
-- [Getting Started](#Getting Started with Create React App and Redux)
-
+- [Getting Started with Create React App and Redux](#getting started with create react app and redux)
 
 # Dragon Space-X
 
