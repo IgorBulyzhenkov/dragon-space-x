@@ -16,6 +16,7 @@ const registrationNewUser = createAsyncThunk(
       const { data } = await axios.post("/register", body);
 
       reset();
+      Notify.success("Email sent!");
       return data;
     } catch (error) {
       Notify.failure(error.response.data.message);
@@ -33,6 +34,7 @@ const logInUser = createAsyncThunk(
       const { data } = await axios.post("/login", body);
       token.set(data.token);
       reset();
+      Notify.success(`Hello ${data.name}!`);
       return data;
     } catch (error) {
       Notify.failure(error.response.data.message);
@@ -46,6 +48,7 @@ const logOutUser = createAsyncThunk(
   async (_, { rejectWithValue }) => {
     try {
       await axios.post("/logout");
+      Notify.warning("You is log out");
       token.unset();
     } catch (error) {
       Notify.failure(error.response.data.message);
@@ -77,10 +80,11 @@ const fetchVerifyUser = createAsyncThunk(
   async (_, { getState, rejectWithValue }) => {
     const state = getState();
     const persistorToken = state.user.verificationToken;
-
     if (persistorToken === null) return rejectWithValue();
     try {
       const { data } = await axios.get(`/verify/${persistorToken}`);
+
+      Notify.success("Email sent!");
       return data;
     } catch (error) {
       Notify.failure(error.response.data.message);
