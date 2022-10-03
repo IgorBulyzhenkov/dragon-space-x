@@ -14,7 +14,7 @@
 ## Dragon Space-X
   
 [![Dragon.gif](https://i.postimg.cc/GhTW0S4T/Dragon.gif)](https://postimg.cc/HVHZXz4T)
-  <a href='https://postimg.cc/HVHZXz4T' target='_blank'><img src='https://i.postimg.cc/HVHZXz4T/Dragon.gif' border='0' alt='Dragon'/></a>
+ <img src='https://i.postimg.cc/HVHZXz4T/Dragon.gif' border='0' alt='Dragon' width="800"/>
 ## Description
   
 ## Pages
