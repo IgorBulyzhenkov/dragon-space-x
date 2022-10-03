@@ -6,44 +6,41 @@
 - [Getting Started](#getting-started-with-create-react-app-and-redux)
 - [Libraries](#libraries)
 
-
-
 <h2 align="center">
   
 ![Netlify](https://img.shields.io/netlify/c2f08a19-a2ab-449b-be46-0bef50ab12e0)        ![GitHub top language](https://img.shields.io/github/languages/top/IgorBulyzhenkov/test-front)               ![GitHub search hit counter](https://img.shields.io/github/search/IgorBulyzhenkov/test-front/main)                 ![GitHub language count](https://img.shields.io/github/languages/count/IgorBulyzhenkov/test-front)
 
-## Dragon Space-X 
+## Dragon Space-X
 
 [![Dragon-Space-min.gif](https://i.postimg.cc/NFYXkn29/Dragon-Space-min.gif)](https://postimg.cc/DJjm2Bgn)
 
-![Dragon-Space.gif](https://i.postimg.cc/XvyzyZ0H/Dragon.gif)
-  
+<img src="https://i.postimg.cc/XvyzyZ0H/Dragon.gif" width="800"/>
+
 
 ## Description
-  
+
 ## Pages
 
 [![The-Gentelmens.jpg](https://i.postimg.cc/C1XCCdM5/The-Gentelmens.jpg)](https://postimg.cc/YGNmMrWB)
-  
+
 ## Libraries
 
 List of libraries I used in this project
 
-|  Libraries | NPM |
-| ------ | ------ | 
-| Redux | https://www.npmjs.com/package/redux |
-| Redux-Tulkit | https://www.npmjs.com/package/@reduxjs/toolkit |
-| redux-persist | https://www.npmjs.com/package/redux-persist |
-| react-router-dom |https://www.npmjs.com/package/react-router-dom|
-| react-dom | https://www.npmjs.com/package/react-dom |
-| prop-types | https://www.npmjs.com/package/prop-types |
-| formik | https://www.npmjs.com/package/formik |
-| uuid | https://www.npmjs.com/package/uuid |
-| axios |https://www.npmjs.com/package/axios |
-| react-icons |https://www.npmjs.com/package/react-icons|
+| Libraries            | NPM                                                |
+| -------------------- | -------------------------------------------------- |
+| Redux                | https://www.npmjs.com/package/redux                |
+| Redux-Tulkit         | https://www.npmjs.com/package/@reduxjs/toolkit     |
+| redux-persist        | https://www.npmjs.com/package/redux-persist        |
+| react-router-dom     | https://www.npmjs.com/package/react-router-dom     |
+| react-dom            | https://www.npmjs.com/package/react-dom            |
+| prop-types           | https://www.npmjs.com/package/prop-types           |
+| formik               | https://www.npmjs.com/package/formik               |
+| uuid                 | https://www.npmjs.com/package/uuid                 |
+| axios                | https://www.npmjs.com/package/axios                |
+| react-icons          | https://www.npmjs.com/package/react-icons          |
 | react-items-carousel | https://www.npmjs.com/package/react-items-carousel |
-| react-spinners | https://www.npmjs.com/package/react-spinners |
-
+| react-spinners       | https://www.npmjs.com/package/react-spinners       |
 
 ## Getting Started with Create React App and Redux
 
