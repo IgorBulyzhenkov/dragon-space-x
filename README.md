@@ -1,7 +1,5 @@
 <h1 align="center">Dragon space-X</h1>
 
-[![Dragon.gif](https://i.postimg.cc/GhTW0S4T/Dragon.gif)](https://postimg.cc/HVHZXz4T)
-
 - [Description](#description)
 - [Dragon](#dragon)
 - [Pages](#pages)
@@ -15,8 +13,8 @@
 
 ## Dragon Space-X
   
-
-  
+[![Dragon.gif](https://i.postimg.cc/GhTW0S4T/Dragon.gif)](https://postimg.cc/HVHZXz4T)
+  <a href='https://postimg.cc/HVHZXz4T' target='_blank'><img src='https://i.postimg.cc/HVHZXz4T/Dragon.gif' border='0' alt='Dragon'/></a>
 ## Description
   
 ## Pages
