@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunktest_front=self.webpackChunktest_front||[]).push([[355],{6478:function(e,n,t){t.r(n),t.d(n,{default:function(){return h}});var r=t(2791),i=t(9434),a=t(6995),f=t(9782),s={main:"Verify_main__GLLRQ"},c=t(3329),u=a.Z.fetchVerifyUser;function o(){var e=(0,i.I0)();return(0,r.useEffect)((function(){e(u())}),[e]),(0,c.jsx)("main",{className:s.main,children:(0,c.jsx)(f.Z,{children:(0,c.jsx)("h1",{className:s.title,children:"Thank you for verification"})})})}var h=(0,r.memo)(o)}}]);
+//# sourceMappingURL=Verify.25e39f80.chunk.js.map
