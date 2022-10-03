@@ -7,4 +7,4 @@
 
 ## Pages
 
-<img src='https://i.postimg.cc/9f1qb0bV/The-Gentelmens-1-min.gif' border='0' alt='The-Gentelmens-1-min'/>
+[![The-Gentelmens.jpg](https://i.postimg.cc/C1XCCdM5/The-Gentelmens.jpg)](https://postimg.cc/YGNmMrWB)
