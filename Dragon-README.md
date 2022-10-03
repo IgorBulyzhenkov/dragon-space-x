@@ -1,5 +1,0 @@
-# test-front
-
-
-	/netlify/:projectId
-  
