@@ -4,7 +4,7 @@
 - [Dragon](#dragon)
 - [Pages](#pages)
 - [Getting Started](#getting-started-with-create-react-app-and-redux)
-- [Libary](#libary)
+- [Libraries](#libraries)
 
 
 
@@ -13,21 +13,20 @@
 ![Netlify](https://img.shields.io/netlify/c2f08a19-a2ab-449b-be46-0bef50ab12e0)        ![GitHub top language](https://img.shields.io/github/languages/top/IgorBulyzhenkov/test-front)               ![GitHub search hit counter](https://img.shields.io/github/search/IgorBulyzhenkov/test-front/main)                 ![GitHub language count](https://img.shields.io/github/languages/count/IgorBulyzhenkov/test-front)
 
 ## Dragon Space-X 
-  
+
 [![Dragon-Space-min.gif](https://i.postimg.cc/NFYXkn29/Dragon-Space-min.gif)](https://postimg.cc/DJjm2Bgn)
-  
-  
+
 ## Description
   
 ## Pages
 
 [![The-Gentelmens.jpg](https://i.postimg.cc/C1XCCdM5/The-Gentelmens.jpg)](https://postimg.cc/YGNmMrWB)
   
-## Libery
+## Libraries
 
 List of libraries I used in this project
 
-|  Libary | NPM |
+|  Libraries | NPM |
 | ------ | ------ | 
 | Redux | https://www.npmjs.com/package/redux |
 | Redux-Tulkit | https://www.npmjs.com/package/@reduxjs/toolkit |
