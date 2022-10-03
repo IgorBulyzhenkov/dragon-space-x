@@ -2,9 +2,9 @@
 - [Pages](#pages)
 - [Getting Started](#getting-started-with-create-react-app-and-redux)
 
-<h1 #Dragon Space-X>Dragon Space-X</h1>
+# Dragon Space-X
 
-<div>![Netlify](https://img.shields.io/netlify/c2f08a19-a2ab-449b-be46-0bef50ab12e0)        ![GitHub top language](https://img.shields.io/github/languages/top/IgorBulyzhenkov/test-front)               ![GitHub search hit counter](https://img.shields.io/github/search/IgorBulyzhenkov/test-front/main)                 ![GitHub language count](https://img.shields.io/github/languages/count/IgorBulyzhenkov/test-front)</div>
+![Netlify](https://img.shields.io/netlify/c2f08a19-a2ab-449b-be46-0bef50ab12e0)        ![GitHub top language](https://img.shields.io/github/languages/top/IgorBulyzhenkov/test-front)               ![GitHub search hit counter](https://img.shields.io/github/search/IgorBulyzhenkov/test-front/main)                 ![GitHub language count](https://img.shields.io/github/languages/count/IgorBulyzhenkov/test-front)
 
 [![Dragon.gif](https://i.postimg.cc/13vbcwnK/Dragon.gif)](https://postimg.cc/MnjszcYc)
 
@@ -12,7 +12,7 @@
 
 [![The-Gentelmens.jpg](https://i.postimg.cc/C1XCCdM5/The-Gentelmens.jpg)](https://postimg.cc/YGNmMrWB)
 
-## Getting Started with Create React App and Redux
+<h1 # Getting Started with Create React App and Redux>Getting Started with Create React App and Redux</h1>
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
 
