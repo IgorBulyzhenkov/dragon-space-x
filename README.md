@@ -13,7 +13,7 @@
 
 ## Dragon Space-X
   
-[![Dragon-2.gif](https://i.postimg.cc/XqSY307X/Dragon-2.gif)](https://postimg.cc/5YgVqTzM)
+[Dragon-2.gif](https://postimg.cc/5YgVqTzM)
   
 ## Description
   
