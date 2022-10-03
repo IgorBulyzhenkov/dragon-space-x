@@ -7,4 +7,4 @@
 
 ## Pages
 
-[![The-Gentelmens-1-min.gif](https://i.postimg.cc/Njz44Njp/The-Gentelmens-1-min.gif)](https://postimg.cc/jDyPq4N7)
+<a href='https://postimg.cc/jDyPq4N7' target='_blank'><img src='https://i.postimg.cc/jDyPq4N7/The-Gentelmens-1-min.gif' border='0' alt='The-Gentelmens-1-min'/></a>
