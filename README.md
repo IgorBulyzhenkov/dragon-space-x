@@ -2,11 +2,6 @@
 
 ![GitHub top language](https://img.shields.io/github/languages/top/IgorBulyzhenkov/test-front)
 
-<img alt="GitHub top language" src="https://img.shields.io/github/languages/top/IgorBulyzhenkov/test-front">
+![GitHub search hit counter](https://img.shields.io/github/search/IgorBulyzhenkov/test-front/main)
 
-.. image:: https://img.shields.io/github/languages/top/IgorBulyzhenkov/test-front
-   :alt: GitHub top language
-
-https://img.shields.io/github/languages/top/IgorBulyzhenkov/test-front
-
-https://img.shields.io/github/languages/top/IgorBulyzhenkov/test-front?style=flat-square
+![GitHub language count](https://img.shields.io/github/languages/count/IgorBulyzhenkov/test-front)
