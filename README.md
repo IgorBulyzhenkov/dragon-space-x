@@ -14,7 +14,7 @@
 
 ## Dragon Space-X 
   
-<img src="https://i.postimg.cc/XvyzyZ0H/Dragon-Space.gif" alt="0">
+![Dragon-Space.gif](https://i.postimg.cc/XvyzyZ0H/Dragon-Space.gif)
   
 ## Description
   
