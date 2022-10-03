@@ -49,6 +49,11 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Available Scripts
 
+### `npm install`
+
+Before starting the project locally, first you need to do npm install 
+in order to install all the libraries from package.json
+
 In the project directory, you can run:
 
 ### `npm start`
