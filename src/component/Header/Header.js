@@ -1,5 +1,5 @@
 import s from "./Header.module.css";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import logo from "../../image/kisspnspacex-dragon.png";
 import Container from "../Container/Container";
 import { MdMenu } from "react-icons/md";
@@ -35,7 +35,10 @@ function Header() {
     <header className={s.header}>
       <Container>
         <div className={s.headerContainer}>
-          <img src={logo} alt="logo" className={s.logo} />
+          <Link to="/home">
+            <img src={logo} alt="logo" className={s.logo} />
+          </Link>
+
           {isLoggedIn ? (
             <>
               <p className={s.text}>Welcome {name}!</p>

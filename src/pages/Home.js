@@ -18,7 +18,7 @@ function Home() {
     const id = e.target.id;
     if (!id) return;
     dispatch(fetchDragonId(id));
-    navigate(`/details/${id}`);
+    navigate(`/details/${id}`, {state:{from:"/home"}});
   };
 
   return (
@@ -42,7 +42,12 @@ function Home() {
                     {name}
                   </h2>
                   <div className={s.containerImg}>
-                    <Link onClick={handleClick} id={id} className={s.link_img}>
+                    <Link
+                      onClick={handleClick}
+                      id={id}
+                      className={s.link_img}
+                      state={{home:"/home" }}
+                    >
                       <img
                         src={flickr_images}
                         alt={flickr_images}
