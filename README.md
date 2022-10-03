@@ -7,4 +7,4 @@
 
 ## Pages
 
-<a href='https://postimg.cc/f3tLTw1g' target='_blank'><img src='https://i.postimg.cc/9f1qb0bV/The-Gentelmens-1-min.gif' border='0' alt='The-Gentelmens-1-min'/></a>
+<img src='https://i.postimg.cc/9f1qb0bV/The-Gentelmens-1-min.gif' border='0' alt='The-Gentelmens-1-min'/>
