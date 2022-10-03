@@ -1,3 +1,9 @@
+<h1 align="center">Dragon space-X</h1>
+<h2 align="center">
+
+[![Mentioned in Awesome React.js](https://awesome.re/mentioned-badge.svg)](https://github.com/reactjs/awesome-react)
+
+
 - [Dragon](#dragon)
 - [Pages](#pages)
 - [Getting Started](#getting-started-with-create-react-app-and-redux)
