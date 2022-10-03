@@ -1,14 +1,11 @@
 <h1 align="center">Dragon space-X</h1>
-<h2 align="center">
-
-[![Mentioned in Awesome React.js](https://awesome.re/mentioned-badge.svg)](https://github.com/reactjs/awesome-react)
-
 
 - [Dragon](#dragon)
 - [Pages](#pages)
 - [Getting Started](#getting-started-with-create-react-app-and-redux)
 
 # Dragon Space-X
+<h2 align="center">
 
 ![Netlify](https://img.shields.io/netlify/c2f08a19-a2ab-449b-be46-0bef50ab12e0)        ![GitHub top language](https://img.shields.io/github/languages/top/IgorBulyzhenkov/test-front)               ![GitHub search hit counter](https://img.shields.io/github/search/IgorBulyzhenkov/test-front/main)                 ![GitHub language count](https://img.shields.io/github/languages/count/IgorBulyzhenkov/test-front)
 
