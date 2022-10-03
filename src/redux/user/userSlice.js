@@ -67,12 +67,10 @@ const authSlice = createSlice({
       state.error = payload;
       state.isRefreshing = false;
       state.verificationToken = null;
-      state.verifyMail = false;
     },
     [logInUser.rejected](state, { payload }) {
       state.error = payload;
       state.isRefreshing = false;
-      state.verifyMail = false;
     },
     [logOutUser.rejected](state, { payload }) {
       state.error = payload;

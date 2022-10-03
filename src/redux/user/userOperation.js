@@ -33,8 +33,9 @@ const logInUser = createAsyncThunk(
     try {
       const { data } = await axios.post("/login", body);
       token.set(data.token);
+      
       reset();
-      Notify.success(`Hello ${data.name}!`);
+      Notify.success(`Hello ${data.user.name}!`);
       return data;
     } catch (error) {
       Notify.failure(error.response.data.message);
@@ -84,7 +85,6 @@ const fetchVerifyUser = createAsyncThunk(
     try {
       const { data } = await axios.get(`/verify/${persistorToken}`);
 
-      Notify.success("Email sent!");
       return data;
     } catch (error) {
       Notify.failure(error.response.data.message);
@@ -99,11 +99,10 @@ const fetchVerifyMail = createAsyncThunk(
     const state = getState();
     const persistorMail = state.user.email;
 
-    console.log(persistorMail);
-
     if (persistorMail === null) return rejectWithValue();
     try {
       const { data } = await axios.post("/verify", { email: persistorMail });
+      Notify.success("Email sent!");
       return data;
     } catch (error) {
       Notify.failure(error.response.data.message);
