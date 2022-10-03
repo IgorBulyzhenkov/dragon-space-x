@@ -1,6 +1,6 @@
 - [Dragon](#dragon)
 - [Pages](#pages)
-- [Getting Started with Create React App and Redux](#getting started with create react app and redux)
+- [Getting Started](#getting started)
 
 # Dragon Space-X
 
@@ -13,6 +13,8 @@
 
 [![The-Gentelmens.jpg](https://i.postimg.cc/C1XCCdM5/The-Gentelmens.jpg)](https://postimg.cc/YGNmMrWB)
 
+
+## Getting Started
 ## Getting Started with Create React App and Redux
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
