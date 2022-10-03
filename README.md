@@ -12,9 +12,13 @@
 
 ## Dragon Space-X
 
-<img src="./src/image/Dragon.gif" width="800"/>
+<img src="./src/image/Dragon.gif" width="1000"/>
 
 ## Description
+
+Hello ! Thank you for taking the time to view my project. This project is built on React. It is also connected to the backend, which is built on Node.js. Git
+ repository https://github.com/IgorBulyzhenkov/test-back , which is uploaded to Hiroku hosting. The main project is uploaded to netflix hosting https://dragon-space-x.netlify.app/.
+To enter the main pages of the site, you need to register. I implemented protection against non-existent boxes. After registration, a letter will be sent to the indicated address in which you need to confirm your identity. If the letter is not visible in the "Inbox" folder - you need to check the "Spam" folder, if there is nothing in it - a button will appear on the site with which you can send the letter again. The site is adapted for all types of devices, starting with mobile and ending with the desktop version. There is also a link to my LinkedIn in the footer of the website, I will be glad to see you among my friends.
 
 ## Pages
 
@@ -46,6 +50,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Available Scripts
 
 In the project directory, you can run:
+  
+### `npm install`
+
+Before starting the project locally, first you need to do npm install in order to install all the libraries from package.json.
 
 ### `npm start`
 
