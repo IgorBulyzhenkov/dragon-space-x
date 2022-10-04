@@ -1,6 +1,7 @@
 import { Formik } from "formik";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
+import { Notify } from "notiflix/build/notiflix-notify-aio";
 import s from "./Registry.module.css";
 import user from "../../redux/user/userOperation";
 
@@ -22,7 +23,11 @@ function Registry() {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (email && password && name) {
-      dispatch(registrationNewUser({ name, email, password, reset }));
+      return dispatch(registrationNewUser({ name, email, password, reset }));
+    }
+
+    if (!email || !password || !name) {
+      Notify.failure("Name and email and password is required");
     }
   };
 
@@ -111,7 +116,7 @@ function Registry() {
                 onBlur={handleBlur}
                 value={password}
                 className={s.textField__input}
-                placeholder="you password"
+                placeholder="min length is 7 characters"
               />
             </label>
 

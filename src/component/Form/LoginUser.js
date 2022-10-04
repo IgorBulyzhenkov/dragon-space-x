@@ -1,6 +1,7 @@
 import { Formik } from "formik";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
+import { Notify } from "notiflix/build/notiflix-notify-aio";
 import s from "./LoginUser.module.css";
 import user from "../../redux/user/userOperation";
 
@@ -9,7 +10,6 @@ const { logInUser } = user;
 function LoginUser() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
   const dispatch = useDispatch();
 
   const reset = () => {
@@ -22,6 +22,10 @@ function LoginUser() {
     if (email && password) {
       dispatch(logInUser({ email, password, reset }));
     }
+
+    if (!email || !password) {
+      Notify.failure("Email and password is required");
+    } 
   };
 
   const handleChange = ({ target: { name, value } }) => {
@@ -42,11 +46,11 @@ function LoginUser() {
       <div className={s.textContainer}>
         <h1 className={s.title}>Hello!</h1>
         <p className={s.text}>
-          I am glad that you are reviewing my test assignment. In order
-          to go to the main pages, you need to register, then confirm your
-          email, and only then browse the site. The website is adapted to all
-          types of devices, from mobile to desktop. I wish you a nice day and a
-          pleasant viewing!
+          I am glad that you are reviewing my test assignment. In order to go to
+          the main pages, you need to register, then confirm your email, and
+          only then browse the site. The website is adapted to all types of
+          devices, from mobile to desktop. I wish you a nice day and a pleasant
+          viewing!
         </p>
       </div>
       {/* <h1>Anywhere in your app!</h1> */}
@@ -94,7 +98,7 @@ function LoginUser() {
                 onBlur={handleBlur}
                 value={password}
                 className={s.textField__input}
-                placeholder="you password"
+                placeholder="min length is 7 characters"
               />
             </label>
 
