@@ -1,6 +1,6 @@
 import axios from "axios";
 
-axios.defaults.baseURL = "https://dragon-bhdm.onrender.com";
+axios.defaults.baseURL = "https://dragon-bhdm.onrender.com/api/users";
 
 export const token = {
   set(token) {
