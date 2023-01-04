@@ -1,6 +1,6 @@
 import axios from "axios";
 
-axios.defaults.baseURL = "https://igor-bulyzhenkov.herokuapp.com/api/users";
+axios.defaults.baseURL = "https://dragon-bhdm.onrender.com";
 
 export const token = {
   set(token) {
